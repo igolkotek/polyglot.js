@@ -33,7 +33,7 @@ var split = String.prototype.split;
 // The string that separates the different phrase possibilities.
 var delimiter = '||||';
 
-var russianPluralGroups = function (n) {
+var slavicPluralGroups = function (n) {
   var lastTwo = n % 100;
   var end = lastTwo % 10;
   if (lastTwo !== 11 && end === 1) {
@@ -55,12 +55,12 @@ var defaultPluralRules = {
       if (lastTwo >= 3 && lastTwo <= 10) return 3;
       return lastTwo >= 11 ? 4 : 5;
     },
-    bosnian_serbian: russianPluralGroups,
+    bosnian_serbian: slavicPluralGroups,
     chinese: function () { return 0; },
-    croatian: russianPluralGroups,
+    croatian: slavicPluralGroups,
     french: function (n) { return n > 1 ? 1 : 0; },
     german: function (n) { return n !== 1 ? 1 : 0; },
-    russian: russianPluralGroups,
+    russian: slavicPluralGroups,
     lithuanian: function (n) {
       if (n % 10 === 1 && n % 100 !== 11) { return 0; }
       return n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19) ? 1 : 2;
@@ -87,7 +87,8 @@ var defaultPluralRules = {
         return 2;
       }
       return 3;
-    }
+    },
+    ukrainian: slavicPluralGroups
   },
 
   // Mapping from pluralization group to individual language codes/locales.
@@ -105,7 +106,8 @@ var defaultPluralRules = {
     czech: ['cs', 'cs-CZ', 'sk'],
     polish: ['pl'],
     icelandic: ['is'],
-    slovenian: ['sl-SL']
+    slovenian: ['sl-SL'],
+    ukrainian: ['uk', 'uk-UA']
   }
 };
 

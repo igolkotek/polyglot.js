@@ -9,3 +9,4 @@ build/*.gz
 npm-shrinkwrap.json
 package-lock.json
 yarn.lock
+.idea

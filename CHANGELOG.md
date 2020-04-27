@@ -1,3 +1,6 @@
+### v2.5.0: September 10, 2019
+ * [New] support for Ukrainian (Cyrillic)
+
 ### v2.4.0: September 10, 2019
  * [New] add ability to configure pluralization rules (#138)
 
@@ -10,7 +13,7 @@
  * [Tests] on `node` `v12`, `v11`, `v10`
 
 ### v2.3.0: July 2, 2018
- * [New] add ability to change interpolation regex by specifying prefix and suffix (#106, #64)
+ * [New] add ability to change interpolation regex by specifying prefix and ffix (#106, #64)
  * [New] support for Serbian (Latin & Cyrillic), Bosnian (Latin & Cyrillic), Czech (#113)
  * [Fix] Moved lt to it's own group (#101)
  * [Fix] Moved tr from chinese to german group (#100)
